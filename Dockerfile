@@ -29,10 +29,8 @@ VOLUME /datak
 RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev && \
     apk add --no-cache --update python3 && \
     pip3 install --upgrade pip setuptools
-RUN pip3 install pendulum service_identity
+RUN pip3 install pendulum service_identity dnspython
 
 CMD ["sh"]
 
-CMD ["python3 -m http.server --bind 0.0.0.0 8080"]
-
-EXPOSE 80:8080
+EXPOSE 8080
