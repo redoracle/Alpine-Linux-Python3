@@ -26,12 +26,14 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN mkdir /datak 
 RUN touch /datak/x
 VOLUME /datak
-RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev && \
+RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev libxml2 libxml2-dev&& \
     apk add --no-cache --update python3 && \
     apk update && \
     apk upgrade && \
     pip3 install --upgrade pip setuptools
-RUN pip3 install pendulum service_identity dnspython
+RUN pip3 install pendulum service_identity  
+RUN pip3 install dnspython requests requests-xml lxml
+RUN pip3 install scrapy Pillow SQLAlchemy pandas numpy scipy twisted[tls] beautifulsoup4 ipython 
 
 CMD ["sh"]
 
