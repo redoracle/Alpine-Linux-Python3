@@ -28,6 +28,8 @@ RUN touch /datak/x
 VOLUME /datak
 RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev && \
     apk add --no-cache --update python3 && \
+    apk update && \
+    apk upgrade && \
     pip3 install --upgrade pip setuptools
 RUN pip3 install pendulum service_identity dnspython
 
