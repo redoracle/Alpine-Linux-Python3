@@ -30,6 +30,9 @@ RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-
     apk add --no-cache --update python3 && \
     pip3 install --upgrade pip setuptools
 RUN pip3 install pendulum service_identity
+
 CMD ["sh"]
+
+CMD ["python3 -m http.server --bind 0.0.0.0 8080"]
 
 EXPOSE 80:8080
