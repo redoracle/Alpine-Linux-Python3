@@ -33,7 +33,7 @@ RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-
     pip3 install --upgrade pip setuptools
 RUN pip3 install pendulum service_identity  
 RUN pip3 install dnspython requests requests-xml lxml
-RUN pip3 install scrapy Pillow SQLAlchemy pandas numpy scipy twisted[tls] beautifulsoup4 ipython 
+RUN pip3 install scrapy Pillow SQLAlchemy twisted[tls] beautifulsoup4  
 
 CMD ["sh"]
 
