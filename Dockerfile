@@ -33,7 +33,7 @@ RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-
     pip3 install --upgrade pip setuptools
 RUN pip3 install pendulum service_identity  
 RUN pip3 install dnspython requests Fake-useragent
-RUN pip3 install scrapy SQLAlchemy beautifulsoup4  
+RUN pip3 install beautifulsoup4  
 
 
 CMD ["sh"]
