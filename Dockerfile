@@ -32,7 +32,7 @@ RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-
     apk upgrade && \
     pip3 install --upgrade pip setuptools
 RUN pip3 install pendulum service_identity  
-RUN pip3 install dnspython requests Fake-useragent
+RUN pip3 install dnspython requests requests-xml Fake-useragent
 RUN pip3 install beautifulsoup4  
 
 
