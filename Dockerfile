@@ -26,7 +26,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN mkdir /datak 
 RUN touch /datak/x
 VOLUME /datak
-RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev libxml2 libxml2-dev libxslt && \
+RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev && \
     apk add --no-cache --update python3 && \
     apk update && \
     apk upgrade && \
